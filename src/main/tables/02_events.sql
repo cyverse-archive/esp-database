@@ -10,6 +10,7 @@ CREATE TABLE events (
        event_uuid uuid UNIQUE NOT NULL,
        event_sources_id bigint NOT NULL references event_sources(id),
        event_data text NOT NULL,
+       event_type VARCHAR(255) NOT NULL,
        date_created timestamp with time zone,
        date_modified timestamp with time zone,
        last_modified_by text
