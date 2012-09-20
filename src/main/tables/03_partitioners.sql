@@ -7,7 +7,7 @@ CREATE SEQUENCE partitioners_id_seq
 
 CREATE TABLE partitioners (
        id bigint DEFAULT nextval('partitioners_id_seq'::regclass) primary key,
-       part_key VARCHAR(255) NOT NULL,
+       part_key VARCHAR(255) UNIQUE NOT NULL,
        last_run_time timestamp with time zone NOT NULL,
        date_created timestamp with time zone,
        date_modified timestamp with time zone,
